@@ -6,19 +6,19 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    public static void main(String[] args) throws Exception {
-        String url="jdbc:mysql://localhost:3306/daotest";
-        String userName="root";
-        String password ="root";
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        try( Connection connect = DriverManager.getConnection(url, userName, password)) {
-            System.out.println( "We are connect");
-        }
-
-    }
+    private static final String url = "jdbc:mysql://localhost:3306/Hibernate";
+    private static final String userName = "root";
+    private static String password = "root";
+    private static SessionFactory sessionFactory;
 
     public static Connection getConnection() {
-        return null;
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(url, userName, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return connection;
     }
 }
 
