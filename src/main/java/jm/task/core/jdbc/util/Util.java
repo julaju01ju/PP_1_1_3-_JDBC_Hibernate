@@ -9,7 +9,7 @@ public class Util {
     private static final String url = "jdbc:mysql://localhost:3306/Hibernate";
     private static final String userName = "root";
     private static String password = "root";
-    private static SessionFactory sessionFactory;
+    
 
     public static Connection getConnection() {
         Connection connection = null;
