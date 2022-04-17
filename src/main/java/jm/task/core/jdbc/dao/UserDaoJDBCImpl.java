@@ -42,7 +42,7 @@ public class UserDaoJDBCImpl implements UserDao {
             pst.setString(2, lastName);
             pst.setByte(3, age);
             pst.executeUpdate();
-            System.out.println("User name – "+ name +" добавлен");
+            System.out.println("User с именем – "+ name +" добавлен в базу данных");
         } catch (SQLException e) {
             e.printStackTrace();
         }
